@@ -1,5 +1,4 @@
 # gwt-gradle-seed
-gwt-gradle-seed — the seed for GWT apps backed with Gradle
 
 This project is an application skeleton for a [GWT](http://www.gwtproject.org/) web app.
 You can use it to quickly bootstrap your GWT webapp and Gradle based dev environment.
