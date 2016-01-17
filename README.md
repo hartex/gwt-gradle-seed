@@ -13,7 +13,7 @@ To get you started you can simply clone the gwt-gradle-seed repository and insta
 ### Prerequisites
 
 You need git to clone gwt-gradle-seed repository. You can get git from
-[http://git-scm.com/](http://git-scm.com/).
+[git-scm.com](http://git-scm.com/).
 
 ### Clone gwt-gradle-seed
 
@@ -26,7 +26,7 @@ cd gwt-gradle-seed
 
 If you want to start a new project without the gwt-gradle-seed commit history then you can do:
 
-```bash
+```
 git clone --depth=1 https://github.com/hartex/gwt-gradle-seed.git <your-project-name>
 ```
 
@@ -34,16 +34,23 @@ The `depth=1` tells git to only pull down one commit worth of historical data.
 
 ### Install Dependencies
 
+To install all dependencies run:
+
+```
+grandle build
+```
+
 
 ### Run the Application
 
-That project are preconfigured with Jetty instance as a simple development web server, to start it just run: :
+That project are preconfigured with Jetty instance as a simple development web server, to start it just run:
 
 ```
 gradle JettyRunWar
 ```
 
-Now browse to the app at `http://localhost:8089/index.html`.
+Now browse your app at `http://localhost:8089/gwt-gradle-seed/im.hartex.HelloWorld/HelloWorld.html`.
 
-####
-#### Big thanks to Andres Cespedes and his example [http://git-scm.com/](http://git-scm.com/) http://examples.javacodegeeks.com/core-java/gradle/gradle-gwt-integration-example/
+_Inspired by [angular-seed](https://github.com/angular/angular-seed)_
+
+_Big thanks to [Andres Cespedes](https://twitter.com/acespedes12) and his [example](http://examples.javacodegeeks.com/core-java/gradle/gradle-gwt-integration-example/)_

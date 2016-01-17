@@ -1,0 +1,59 @@
+apply plugin: 'war'
+apply plugin: 'java'
+apply plugin: 'gwt'
+apply plugin: 'jetty'
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+version = '1.0'
+
+buildscript {
+    repositories {
+        jcenter() //repository where to fetch gwt gradle plugin
+    }
+    dependencies {
+        classpath 'de.richsource.gradle.plugins:gwt-gradle-plugin:0.6'
+    }
+}
+
+dependencies {
+    compile 'com.google.gwt:gwt-user:2.7.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+compileJava{
+    options.incremental = true
+}
+
+gwt {
+    gwtVersion = '2.7.0'
+    logLevel = 'ERROR'
+    minHeapSize = "256M";
+    maxHeapSize = "1024M";
+    // specify your main module
+    modules 'im.hartex.HelloWorld'
+
+    sourceSets {
+        main {
+            java {
+                srcDir 'src/main/java'
+            }
+        }
+    }
+
+    superDev {
+        noPrecompile = true
+    }
+
+    // specify the deployment port
+    jettyRunWar.httpPort = 8089
+}
+
+task jettyDraftWar(type: JettyRunWar) {
+    dependsOn draftWar
+    dependsOn.remove('war')
+    webApp=draftWar.archivePath
+}
