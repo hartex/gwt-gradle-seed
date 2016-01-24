@@ -7,7 +7,7 @@ The seed app doesn't do much, just contains a skeleton and one GWT module.
 
 ## Getting Started
 
-To get you started you can simply clone the gwt-gradle-seed repository and install the dependencies:
+To get you started you can simply clone the gwt-gradle-seed repository and install the dependencies.
 
 ### Prerequisites
 
@@ -16,7 +16,7 @@ You need git to clone gwt-gradle-seed repository. You can get git from
 
 ### Clone gwt-gradle-seed
 
-Clone the angular-seed repository using [git][git]:
+Clone the gwt-gradle-seed repository using [git][git]:
 
 ```
 git clone https://github.com/hartex/gwt-gradle-seed.git
